@@ -1,27 +1,24 @@
+import math as m
 import numpy as np
 import pandas as pd
-import math as m
+import matplotlib.pyplot as plt
+from sklearn.model_selection import train_test_split
+from sklearn.metrics import accuracy_score, confusion_matrix, ConfusionMatrixDisplay
 
 
 train_data_file = "data/disease_train.csv"
 test_data_file = "data/disease_test.csv"
-pred_data_file = "data/predictedTarget.csv"
+prediction_data_file = "data/predictedTarget.csv"
 
 
-def read_csv_file(file_name: str, delimiter=','):
-    """
-    Reads a CSV file and returns the data as a DataFrame
-    :param file_name: Name of file
-    :param delimiter: Separator between columns
-    :return:
-    """
-    data_frame = pd.read_csv(file_name, delimiter=delimiter)
-    return data_frame
+def split_to_train_val(data: pd.DataFrame, split_value=0.3, random=None):
+
+    return
 
 
 def main():
-    train_data = read_csv_file(train_data_file)
-    test_data = read_csv_file(test_data_file)
+    train_data = pd.read_csv(train_data_file, delimiter=",")
+    test_data = pd.read_csv(test_data_file, delimiter=",")
 
 
 if __name__ == '__main__':
